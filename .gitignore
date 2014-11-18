@@ -1,0 +1,18 @@
+# OSX
+.DS_Store
+
+# Eclipse
+.classpath
+.project
+.settings/
+/work
+/bin
+
+# Gradle
+.gradle/
+/build
+/test-output
+
+# Emacs backup files
+*~
+\#*\#/bin

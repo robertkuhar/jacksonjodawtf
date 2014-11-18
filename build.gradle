@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+version = '1.0'
+
+defaultTasks 'clean', 'build'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.7'
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'com.google.guava:guava:18.0'
+    compile 'joda-time:joda-time:2.3'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.3.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.3.2'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.3.2'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-guava:2.3.2'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.3.2'
+    
+    testCompile 'org.testng:testng:6.8.8'
+}
+
+test {
+    useTestNG()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
